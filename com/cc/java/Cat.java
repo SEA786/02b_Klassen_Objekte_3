@@ -21,7 +21,11 @@ public class Cat {
 
     /* Getter */
     public String getName() {
-        return name;
+        if (getPermission()) {
+            return name;
+        } else {
+            return "Sorry, no permission!";
+        }
     }
 
     public String getFurColor() {
@@ -34,9 +38,6 @@ public class Cat {
 
     /* Setter */
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public void setFurColor(String furColor) {
         this.furColor = furColor;
@@ -47,6 +48,10 @@ public class Cat {
     }
     
 
+    private boolean getPermission(){
+        // return true;
+        return false;
+    }
     
 
 
